@@ -113,7 +113,7 @@ namespace Markovian_CSharp
                     break;
                 }
                 // Add to ArrayList the character immediately after key
-                String successor = computedText.Substring(indexOfSuccessor, indexOfSuccessor + 1);
+                String successor = computedText.Substring(indexOfSuccessor, 1);
                 follows.Add(successor);
                 // Update search position in myText
                 pos = index + 1;
