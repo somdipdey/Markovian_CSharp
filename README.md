@@ -5,7 +5,7 @@ Markov Model (N characters + N words) library written in CSharp [C#]. MarkovMode
 
 ## Using Markov Model in C#
 
-#### MarkovModel in use:
+#### MarkovModel for characters in use:
 
             // Training text in string format
             String st = "I completed Hack Reactor in July 2016 and took almost 3 months before accepting an offer with Radius Intelligence.\n"+
