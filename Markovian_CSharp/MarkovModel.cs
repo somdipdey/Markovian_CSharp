@@ -16,9 +16,9 @@ namespace Markovian_CSharp
         // <summary>
         // Constructor for Markov Model class
         // </summary>
-        public MarkovModel(int NumberOfDigits)
+        public MarkovModel(int NumberOfCharacters)
         {
-            keyLength = NumberOfDigits;
+            keyLength = NumberOfCharacters;
             myRandom = new Random();
         }
 
@@ -59,7 +59,7 @@ namespace Markovian_CSharp
         // Predicts the next character by finding all the characters that follow a substring of keyLength
         // characters in the training text, and then randomly picking one of them as the next character.
         // </summary>
-        public String GetRandomText(int NumberOfDigits)
+        public String GetRandomText(int NumberOfCharacters)
         {
             if (computedText == null)
             {
@@ -72,7 +72,7 @@ namespace Markovian_CSharp
             String key = computedText.Substring(index, index + keyLength);
             sb.Append(key);
             // NOTE: Generate numChars minus four cuz they are set before the loop
-            for (int k = 0; k < NumberOfDigits - keyLength; k++)
+            for (int k = 0; k < NumberOfCharacters - keyLength; k++)
             {
                 // Find all characters that follow the current 4-character string
                 List<String> follows = GetFollows(key);
