@@ -1,9 +1,11 @@
 # Markovian_CSharp
-Markov Model (N characters) library written in CSharp [C#]
+Markov Model (N characters + N words) library written in CSharp [C#]. MarkovModel class provides the wrapper for Markov Model for N Characters, whereas, MarkovWordModel class provides wrapper for Markov Model for N words.
 
 [![Build Status](https://travis-ci.org/somdipdey/Markovian_CSharp.svg?branch=master)](https://travis-ci.org/somdipdey/Markovian_CSharp)
 
 ## Using Markov Model in C#
+
+#### MarkovModel in use:
 
             // Training text in string format
             String st = "I completed Hack Reactor in July 2016 and took almost 3 months before accepting an offer with Radius Intelligence.\n"+
@@ -40,3 +42,16 @@ Markov Model (N characters) library written in CSharp [C#]
 
             st 3 months before I began my job search.
             */
+
+#### Markov Model for words in use:
+            // Initialise Markov Model for Words
+            MarkovWordModel markovWord = new MarkovWordModel(4);
+
+            // Set the training text without any new line in it. 
+            markovWord.SetTraining(st);
+
+            // Set the seed
+            markovWord.SetRandom(10);
+
+            // Printout random words
+            Console.Write(markovWord.GetRandomText(200) + Environment.NewLine);
