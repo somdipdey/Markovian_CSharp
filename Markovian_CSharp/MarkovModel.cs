@@ -69,7 +69,7 @@ namespace Markovian_CSharp
             // Generate a random index from valid indexes (those that have following characters)
             int index = myRandom.Next(computedText.Length - keyLength);
             // Assign to key the character string at the random index that is keyLength long
-            String key = computedText.Substring(index, index + keyLength);
+            String key = computedText.Substring(index, keyLength);
             sb.Append(key);
             // NOTE: Generate numChars minus four cuz they are set before the loop
             for (int k = 0; k < NumberOfCharacters - keyLength; k++)
