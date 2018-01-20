@@ -94,6 +94,7 @@ namespace Markovian_CSharp
                 index = myRandom.Next(follows.Count);
                 String successor = follows[index];
                 sb.Append(successor);
+                sb.Append(' ');
 
                 // Combine old key (except first word) with successor to make next key
                 String[] temp = new String[key.Length];
